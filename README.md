@@ -1,5 +1,7 @@
 # ML Incident Copilot
 
+[![CI](https://github.com/HowenT/ml-incident-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/HowenT/ml-incident-copilot/actions/workflows/ci.yml)
+
 **From a model alert to a confirmed root cause, an owner-assigned action plan, and a customer-ready update, with the evidence behind every claim.**
 
 ML models in production rarely fail with an error. They fail quietly. An upstream field gets renamed, a new customer segment shows up, or a release adds 200 ms. The model keeps returning scores and the business keeps making decisions on them. The hard part is not the dashboard. It is the next hour: which alerts belong together, what actually broke, who has to do what, and what to tell the customer.
@@ -138,6 +140,8 @@ python scripts/ui_smoke_test.py     # drives the full demo flow in a real browse
 ```
 
 The scenario tests seed the environment at a fixed time and assert that each incident is diagnosed with the right root cause and onset. They also check that the later release incident does not leak into the drift diagnosis, and that the auto-resolved blip is classified as infrastructure.
+
+Continuous integration runs this backend suite on Python 3.12 and 3.13 for every change to `main` and every pull request.
 
 ## Project layout
 
