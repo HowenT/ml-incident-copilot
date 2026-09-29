@@ -1,7 +1,7 @@
 # Runtime. Tested on Python 3.12/3.13 with the versions noted in README.
 fastapi>=0.115
 uvicorn[standard]>=0.30
-sqlalchemy>=2.0
+sqlalchemy>=2.1.1
 pydantic>=2.7
 pandas>=2.2
 numpy>=1.26
